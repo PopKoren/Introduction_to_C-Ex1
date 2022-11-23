@@ -16,9 +16,6 @@ int sumDigits(int num)
 	return sum;
 }
 
-#include <stdio.h>
-#include <math.h>
-
 int checkID(int id)
 {
     int sumid = 0, sumid2 = 0, scale;
