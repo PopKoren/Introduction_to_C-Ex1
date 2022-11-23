@@ -16,32 +16,35 @@ int sumDigits(int num)
 	return sum;
 }
 
+#include <stdio.h>
+#include <math.h>
+
 int checkID(int id)
 {
-    int sumid = 0, sumid2 = 0, scaleof1;
+    int sumid = 0, sumid2 = 0, scale;
     int id2 = id / 10;
 
     if (log10(id) + 1 < 10)
     {
         while (id > 0)
         {
-            scaleof1 = id % 10;
-            sumid = sumid + scaleof1;
+            scale = id % 10;
+            sumid = sumid + scale;
             id = id / 100;
         }
         
 
         while (id2 > 0) 
         {
-            scaleof1 = id2 % 10; 
-            scaleof1 = (scaleof1 * 2); 
-            if (scaleof1 >= 10)
+            scale = id2 % 10; 
+            scale = (scale * 2); 
+            if (scale >= 10)
             {
-                scaleof1 = scaleof1 % 10 + 1; 
-                sumid2 = scaleof1 + sumid2; 
+                scale = scale % 10 + 1; 
+                sumid2 = scale + sumid2; 
             }
             else
-                sumid2 = sumid2 + scaleof1;
+                sumid2 = sumid2 + scale;
 
             id2 = id2 / 100;
         }
