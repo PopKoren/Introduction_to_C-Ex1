@@ -112,7 +112,7 @@ int checkID(int id)
 		int sumid = 0, sumid2 = 0, scale;
 		int id2 = id / 10;
 
-		if (log10(id) + 1 < 10)
+		if (log10(id) + 1 < 10) // log10 of a number + 1 = length of the number
 		{
 			while (id > 0)
 			{
