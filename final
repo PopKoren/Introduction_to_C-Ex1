@@ -156,9 +156,14 @@ int sumLongestArithmeticList(int n)
 	int MaxRowLength = 0;
 	int CurrentRowLength = 0;
 
-
+	printf("Enter number:\n");
 	scanf_s("%d", &LastNumber);
 
+	if (n == 0)
+	{
+		return 0;
+	}
+	
 	if (n == 1)
 	{
 		return LastNumber;
@@ -168,6 +173,7 @@ int sumLongestArithmeticList(int n)
 
 	for (int i = 1; i < n; i++)
 	{
+		printf("Enter number:\n");
 		scanf_s("%d", &CurrentNumber);
 		if (diff == (CurrentNumber - LastNumber))
 		{
