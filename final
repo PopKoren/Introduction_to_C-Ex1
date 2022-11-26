@@ -55,7 +55,8 @@ int main()
 
 /* Function definitions */
 
-void Ex1() {
+void Ex1() 
+{
 	int id = 0, answer = 0;
 	printf("Please enter your id: ");
 	scanf("%d", &id);
@@ -71,7 +72,8 @@ void Ex1() {
 
 }
 
-void Ex2() {
+void Ex2() 
+{
 	int size = 0, answer = 0;
 	printf("Please enter the arithmetic list size: ");
 	scanf("%d", &size);
@@ -79,7 +81,8 @@ void Ex2() {
 	printf("The sum of the longest sequence arithmetic list is: %d.\n", answer);
 }
 
-void Ex3() {
+void Ex3()
+{
 	int number = 0, spins = 0, answer = 0;
 	printf("Please enter the number and the amount of spins: ");
 	scanf("%d%d", &number, &spins);
