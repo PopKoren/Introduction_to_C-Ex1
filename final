@@ -55,7 +55,7 @@ int main()
 
 /* Function definitions */
 
-void Ex1() 
+void Ex1()
 {
 	int id = 0, answer = 0;
 	printf("Please enter your id: ");
@@ -72,7 +72,7 @@ void Ex1()
 
 }
 
-void Ex2() 
+void Ex2()
 {
 	int size = 0, answer = 0;
 	printf("Please enter the arithmetic list size: ");
@@ -92,62 +92,62 @@ void Ex3()
 
 /* Sub-Function definitions */
 
-int sumDigits(int num) 
+int sumDigits(int num)
 {
 	int sum = 0, i;
 
 	while (num > 0)
 	{
 		i = num % 10;
-		sum = sum + i;
-		num = num / 10;
+		sum += i;
+		num /= 10;
 	}
 
 	return sum;
 }
 
 
-int checkID(int id) 
+int checkID(int id)
 {
-		int sumid = 0, sumid2 = 0, scale;
-		int id2 = id / 10;
+	int sumid = 0, sumid2 = 0, scale;
+	int id2 = id / 10;
 
-		if (log10(id) + 1 < 10) // log10 of a number + 1 = length of the number
+	if (log10(id) + 1 < 10) // log10 of a number + 1 = length of the number
+	{
+		while (id > 0)
 		{
-			while (id > 0)
+			scale = id % 10;
+			sumid += scale;
+			id = id / 100;
+		}
+
+
+		while (id2 > 0)
+		{
+			scale = id2 % 10;
+			scale = (scale * 2);
+			if (scale >= 10)
 			{
-				scale = id % 10;
-				sumid = sumid + scale;
-				id = id / 100;
-			}
-
-
-			while (id2 > 0)
-			{
-				scale = id2 % 10;
-				scale = (scale * 2);
-				if (scale >= 10)
-				{
-					scale = scale % 10 + 1;
-					sumid2 = scale + sumid2;
-				}
-				else
-					sumid2 = sumid2 + scale;
-
-				id2 = id2 / 100;
-			}
-
-
-			if ((sumid + sumid2) == 0) return 0;
-			else if ((sumid + sumid2) % 10 == 0)
-			{
-				return 1;
+				scale = scale % 10 + 1;
+				sumid2 += scale;
 			}
 			else
-				return 0;
+				sumid2 +=  scale;
+
+			id2 = id2 / 100;
+		}
+
+
+		if ((sumid + sumid2) == 0) return 0;
+		else if ((sumid + sumid2) % 10 == 0)
+		{
+			return 1;
 		}
 		else
 			return 0;
+	}
+	else
+		return 0;
 
 }
 
@@ -166,7 +166,7 @@ int sumLongestArithmeticList(int n)
 	{
 		return 0;
 	}
-	
+
 	if (n == 1)
 	{
 		return LastNumber;
@@ -215,19 +215,17 @@ int numberLength(int num)
 
 int rotateNumber(int num, int spins)
 {
-	
 	int ahadot;
 	int length = numberLength(num);
 
 	if (spins % length == 0) return num;
 
-	while (spins > 0)
+	for (int i = 0; i < spins; i++) 
 	{
-		ahadot = num % 10; 
-		num = num / 10;  
-		ahadot = ahadot * pow(10, length - 1); 
-		num = num + ahadot;
-		spins--;
+		ahadot = num % 10;
+		num /= 10;
+		ahadot = ahadot * pow(10, length - 1);
+		num += ahadot;
 	}
 
 	return num;
