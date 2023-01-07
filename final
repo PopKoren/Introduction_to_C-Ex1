@@ -1,3 +1,4 @@
+```
 #define _CRT_SECURE_NO_WARNINGS
 #define N 3
 
@@ -232,3 +233,5 @@ int rotateNumber(int num, int spins)
 }
 
 /* ------------------- */
+
+```
