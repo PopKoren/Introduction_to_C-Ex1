@@ -1,0 +1,4 @@
+﻿  318422474_211480157.c
+C:\Users\koren\source\repos\Introduction to C\Project 1 - Madmah\Project 1 - Madmah\318422474_211480157.c(213,23): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+C:\Users\koren\source\repos\Introduction to C\Project 1 - Madmah\Project 1 - Madmah\318422474_211480157.c(227,40): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Project 1 - Madmah.vcxproj -> C:\Users\koren\source\repos\Introduction to C\Project 1 - Madmah\Debug\Project 1 - Madmah.exe
